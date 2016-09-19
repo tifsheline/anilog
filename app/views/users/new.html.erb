@@ -1,8 +1,14 @@
-<h1>Create A Profile</h1>
+<h1>Welcome to Anilog</h1>
+
+<h3>Create A Profile</h3>
 
 <%= form_for @user do |f| %>
   Name: <%= f.text_field :name %> <br>
+  Age:  <%= f.text_field :age %> <br>
   Email: <%= f.text_field :email %> <br>
   Password: <%= f.password_field :password %> <br>
+  Tagline: <%= f.text_field :body %> <br>
   <%= f.submit 'Create Profile' %>
 <% end %>
+
+<h3>Already Signed Up?</h3>

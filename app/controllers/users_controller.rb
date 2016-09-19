@@ -12,15 +12,19 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new({name: params[:user][:name], email: params[:user][:email], age: params[:user][:age], password: params[:user][:password], body: params[:user][:body]})
     if @user.save
-      reidrect_to show_path
+      redirect_to users_path
+    end
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update({name: params[:user][:name], email: params[:user][:email], age: params[:user][:age], password: params[:user][:password], body: params[:user][:body]})
   end
 
   def destroy
@@ -28,8 +32,7 @@ class UsersController < ApplicationController
 
   # Only these fields are allowed on forms:
   private
-    def user_params
-      params.require(:user).permit(:name, :email, :password)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password)
   end
 end
