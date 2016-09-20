@@ -1,9 +1,16 @@
 <h1>Meet...</h1>
 
 <hr>
-Name: <%= @user.name %> <br>
-Age:  <%= @user.age %> <br>
-      <%= @user.body %> <br>
+Name:     <%= @user.name %> <br>
+Age:      <%= @user.age %> <br>
+Breed:    <%= @user.species %> <br>
+          <%= @user.body %> <br>
+About Me: <%= @user.bio %> <br>
+
+<%= form_for @status do |f| %>
+  <%= f.text_area :body, placeholder: 'update status' %>
+  <%= f.submit %>
+<% end %>
 
 <% if @status %>
   <%=  @status.body %>

@@ -8,7 +8,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @status = @user.statuses.last
+    if @user.statuses.last
+      @status = @user.statuses.last
+    else
+      @status = Status.new
+    end
+
   end
 
   def new

@@ -2,6 +2,8 @@
 
 <% @users.each do |u| %>
   <hr>
-  Name: <%= u.name %> <br>
-  Age: <%= u.age %>
+  Name:   <%= u.name %> <br>
+  Breed:  <%= u.species %> <br>
+  Age:    <%= u.age %>
+  Status: <%= u.status %>
 <% end %>
