@@ -4,28 +4,7 @@ Rails.application.routes.draw do
   root 'users#new'
   resources :users
 
-  # all users:
-  get '/users' => 'users#index'
-
-  # show a new user form:
-  get 'users/new' => 'users#new'
-
-  # show one user:
-  get 'users/:id' => 'users#show'
-
-  # save users to database:
-  post '/users' => 'users#create'
-
-  # edit user profiles:
-  get 'users/:id/edit' => 'users#edit'
-
-  # save edits to database:
-  patch 'users/:id' => 'users#update'
-
-  # delete profile:
-  delete 'users/:id' => 'users#destroy'
-
-  get '/logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   resources :sessions, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
