@@ -1,2 +1,12 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>Edit Your Profile</h1>
+
+<%= form_for @user do |f| %>
+  Name: <%= f.text_field :name %> <br>
+  Breed: <%= f.text_field :species %> <br>
+  Age:  <%= f.text_field :age %> <br>
+  Bio:  <%= f.text_area :bio %> <br>
+  Tagline: <%= f.text_field :body %> <br>
+  Email: <%= f.text_field :email %> <br>
+  Password: <%= f.password_field :password %> <br>
+  <%= f.submit 'Update Profile' %>
+<% end %>
