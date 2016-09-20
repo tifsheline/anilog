@@ -4,9 +4,11 @@
 
 <%= form_for @user do |f| %>
   Name: <%= f.text_field :name %> <br>
+  Breed: <%= f.text_field :species %> <br>
   Age:  <%= f.text_field :age %> <br>
+  Bio:  <%= f.text_area :bio %> <br>
+  Tagline: <%= f.text_field :body %> <br>
   Email: <%= f.text_field :email %> <br>
   Password: <%= f.password_field :password %> <br>
-  Tagline: <%= f.text_field :body %> <br>
   <%= f.submit 'Create Profile' %>
 <% end %>
