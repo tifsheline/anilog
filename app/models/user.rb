@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  has_many :statuses
+
   # def password=(unencrypted_password)
   #   unless unencrypted_password.empty?
   #   @password = unencrypted_password

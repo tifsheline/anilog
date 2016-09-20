@@ -5,6 +5,9 @@ Name: <%= @user.name %> <br>
 Age:  <%= @user.age %> <br>
       <%= @user.body %> <br>
 
+<% if @status %>
+  <%=  @status.body %>
+<% end %>
 
 <%= link_to 'All Anilogs', users_path %>
 
