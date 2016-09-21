@@ -4,7 +4,6 @@
 Name:     <%= @user.name %> <br>
 Age:      <%= @user.age %> <br>
 Breed:    <%= @user.species %> <br>
-          <%= @user.body %> <br>
 About Me: <%= @user.bio %> <br>
 
 <%= form_for @status do |f| %>
@@ -16,6 +15,8 @@ About Me: <%= @user.bio %> <br>
 My Status:<%=  @status.body %>
 <% end %>
 
-<%= link_to 'All Anilogs', users_path %>
+<hr>
+
+<%= link_to 'All Anilogs', users_path %> <br>
 
 <%= link_to 'Edit Profile', edit_user_path %>

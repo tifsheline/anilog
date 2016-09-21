@@ -5,5 +5,5 @@
   Name:   <%= u.name %> <br>
   Breed:  <%= u.species %> <br>
   Age:    <%= u.age %> <br>
-  Status: <%= @status %>
+  Status: <%= u.statuses.last.body %>
 <% end %>
