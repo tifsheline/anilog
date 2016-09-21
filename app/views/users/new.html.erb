@@ -1,14 +1,21 @@
-<h1>Welcome to Anilog</h1>
-<!-- <%= link_to 'Log In', new_session_path %> -->
-<h3>Create A Profile</h3>
+<h1 class="text-center">Welcome to Anilog<small> A Social App for Pets</small></h1>
+
+<h3 class="text-center">Create A Profile</h3>
 
 <%= form_for @user do |f| %>
-  Name: <%= f.text_field :name %> <br>
-  Breed: <%= f.text_field :species %> <br>
-  Age:  <%= f.text_field :age %> <br>
-  Bio:  <%= f.text_area :bio %> <br>
-  Tagline: <%= f.text_field :body %> <br>
-  Email: <%= f.text_field :email %> <br>
-  Password: <%= f.password_field :password %> <br>
-  <%= f.submit 'Create Profile' %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name, class:"form-control", placeholder: 'pet name' %>
+  <%= f.label :species, 'Breed' %><br>
+  <%= f.text_field :species, class:"form-control", placeholder: 'pet breed' %>
+  <%= f.label :age %><br>
+  <%= f.text_field :age, class:"form-control", placeholder: 'pet age' %>
+  <%= f.label :body, 'Tagline' %><br>
+  <%= f.text_field :body, class:"form-control" , placeholder: 'caption'%>
+  <%= f.label :bio %><br>
+  <%= f.text_field :bio, class:"form-control", placeholder: 'pet description' %>
+  <%= f.label :email %><br>
+  <%= f.text_field :email, class:"form-control", placeholder: 'pet owner email address' %>
+  <%= f.label :password %><br>
+  <%= f.text_field :password, class:"form-control", placeholder: 'password' %> <br>
+  <input class="btn btn-default" type="submit" value="Submit">
 <% end %>

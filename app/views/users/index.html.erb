@@ -1,9 +1,14 @@
 <h1>Anilog Profiles</h1>
 
+<%= link_to 'My Profile', user_path(@user) %>
+
 <% @users.each do |u| %>
   <hr>
   Name:   <%= u.name %> <br>
   Breed:  <%= u.species %> <br>
   Age:    <%= u.age %> <br>
-  Status: <%= u.statuses.last.body %>
+  <% if(u.statuses.last) %>
+  Status: <%= u.statuses.last.body %> <br>
+  <%= link_to 'View Profile', user_path(u) %>
+  <% end%>
 <% end %>
