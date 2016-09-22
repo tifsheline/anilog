@@ -1,4 +1,5 @@
 <hr>
+
 My Status: <%= @status.body %>
 
 <%= form_for [@status, @status.comments.build] do |f| %>
@@ -8,4 +9,5 @@ My Status: <%= @status.body %>
 
 <% @status.comments.each do |comment| %>
   <%= comment.body %> <br>
+  <%= comment.created_at %> <br>
 <% end %>
