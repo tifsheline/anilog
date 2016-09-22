@@ -6,11 +6,11 @@ This webapp is designed with the purpose of creating an online community for pet
 
 There are channels on YouTube dedicated to animals.  There are IG accounts created specifically for pets.  But there is no place for an animals voice to be heard (not in the literal sense, of course).  Now there's a webapp where pet owners can be their pet's voice.  
 
-![ERD](AniLog_ERD.png)
+![ERD](readme_assets/images/AniLog_ERD.png)
 
-![Home_page](AniLog_Home_Page_Screenshot.png)
+![Home_page](readme_assets/images/AniLog_Home_Page_Screenshot.png)
 
-![Index_page](AniLog_Index_Page_Screenshot.png)
+![Index_page](readme_assets/images/AniLog_Index_Page_Screenshot.png)
 
 ##How do I Join?
 
@@ -22,7 +22,7 @@ Technologies Used: RoR / Bootstrap / HTML / CSS
 
 By creating models, controllers, and actions in RoR, users of this site are able to create new profiles, log in and out, view other profiles, and add comments to other users' status.  BCrypt gives users a secure way to create and access their profiles.  Bootstrap and paperclips gems were used for styling and to give users the capability of uploading photos.  
 
-![AniLog_App](AniLog_App_Screenshot.png)
+![AniLog_App](readme_assets/images/AniLog_App_Screenshot.png)
 
 ## Not-Yet-Implemented
 
