@@ -43,6 +43,6 @@ class UsersController < ApplicationController
   # Only these fields are allowed on forms:
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password, :bio, :species, :photo)
+    params.require(:user).permit(:name, :email, :password, :bio, :species, :photo, :age, :tagline)
   end
 end

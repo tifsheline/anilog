@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
                          :storage => :s3,
                          url: ":s3_domain_url",
                          path: "/:class/:attachment/:id_partition/:style/:filename",
-                         s3_region: 'us-west-1',
+                         s3_region: 'us-east-1',
                          :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
 
      def s3_credentials

@@ -9,8 +9,9 @@
 
 <%= form_for @user, html: {multipart: true} do |f| %>
 <%= f.file_field :photo %>
+<%= f.submit %>
 <% end %>
-
+<hr>
 Name:     <%= @user.name %> <br>
 Age:      <%= @user.age %> <br>
 Breed:    <%= @user.species %> <br>
