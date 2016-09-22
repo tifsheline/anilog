@@ -9,12 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    if @user.statuses.last
-      @status = @user.statuses.last
-    else
-      @status = Status.new
-    end
-
+    @status = Status.new
   end
 
   def new
@@ -22,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new({name: params[:user][:name], email: params[:user][:email], age: params[:user][:age], password: params[:user][:password], body: params[:user][:body], bio: params[:user][:bio], species: params[:user][:species]})
+    @user = User.new(user_params)
     if @user.save
       redirect_to user_path @user
     end
@@ -34,7 +29,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update({name: params[:user][:name], email: params[:user][:email], age: params[:user][:age], password: params[:user][:password], body: params[:user][:body], bio: params[:user][:bio], species: params[:user][:species]})
+    @user.update(user_params)
 
     redirect_to user_path
   end
@@ -48,6 +43,6 @@ class UsersController < ApplicationController
   # Only these fields are allowed on forms:
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password, :bio, :species, :photo)
   end
 end

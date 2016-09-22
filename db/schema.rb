@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920192502) do
+ActiveRecord::Schema.define(version: 20160922000728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "body"
+    t.integer  "status_id"
+    t.integer  "user_id"
+  end
+
+  add_index "comments", ["status_id"], name: "index_comments_on_status_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "statuses", force: :cascade do |t|
     t.string   "body"
@@ -30,12 +41,18 @@ ActiveRecord::Schema.define(version: 20160920192502) do
     t.string   "email"
     t.integer  "age"
     t.text     "body"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "password_digest"
     t.text     "bio"
     t.string   "species"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
+  add_foreign_key "comments", "statuses"
+  add_foreign_key "comments", "users"
   add_foreign_key "statuses", "users"
 end

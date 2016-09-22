@@ -1,0 +1,11 @@
+<hr>
+My Status: <%= @status.body %>
+
+<%= form_for [@status, @status.comments.build] do |f| %>
+  <%= f.text_area :body, placeholder: 'enter comment here' %>
+  <%= f.submit %>
+<% end %>
+
+<% @status.comments.each do |comment| %>
+  <%= comment.body %> <br>
+<% end %>

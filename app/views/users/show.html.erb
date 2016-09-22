@@ -1,18 +1,21 @@
 <h1>Meet...</h1>
 
 <hr>
+<%= image_tag @user.photo.url(:medium) %> <br>
 Name:     <%= @user.name %> <br>
 Age:      <%= @user.age %> <br>
 Breed:    <%= @user.species %> <br>
 About Me: <%= @user.bio %> <br>
 
 <%= form_for @status do |f| %>
-  <%= f.text_area :body, placeholder: 'update status' %>
-  <%= f.submit %>
+<%= f.text_area :body, placeholder: 'What are you up to?' %><br>
+<%= f.submit %>
 <% end %>
 
-<% if @status %>
-My Status:<%=  @status.body %>
+<% @user.statuses.each do |s| %>
+  <hr>
+  <%= s.body %>
+  <%= link_to "Show", status_path(s) %>
 <% end %>
 
 <hr>

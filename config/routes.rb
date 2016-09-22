@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
 
-  root 'users#new'
+  get 'comments/create'
+
+  root 'sessions#new'
   resources :users
-  resources :statuses
+  resources :statuses do
+    resources :comments
+  end
 
   delete '/logout' => 'sessions#destroy', as: :logout
   resources :sessions, only: [:new, :create]
