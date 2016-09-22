@@ -17,5 +17,6 @@
   <%= f.text_field :password, class:"form-control", placeholder: 'password' %> <br>
   <%= f.label :photo %>
   <%= f.file_field :photo, class:"form-control", placeholder: 'upload photo' %> <br>
+  <%= image_tag @user.photo.url %>
   <input class="btn btn-default" type="submit" value="Submit">
 <% end %>

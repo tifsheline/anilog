@@ -6,15 +6,15 @@
 
 <hr>
 <%= image_tag @user.photo.url(:medium) %> <br>
+
+<%= form_for @user, html: {multipart: true} do |f| %>
+<%= f.file_field :photo %>
+<% end %>
+
 Name:     <%= @user.name %> <br>
 Age:      <%= @user.age %> <br>
 Breed:    <%= @user.species %> <br>
 About Me: <%= @user.bio %> <br>
-
-<%= form_for @user, html: {multipart: true} do |f| %>
-<%= f.file_field :photo %>
-<%= image_tag @user.photo.url(:medium) %> 
-<% end %>
 
 <%= form_for @status do |f| %>
 <%= f.text_area :body, placeholder: 'What are you up to?' %><br>

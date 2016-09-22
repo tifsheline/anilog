@@ -3,12 +3,10 @@
 <%= link_to 'Go Back', user_path(@user) %>
 
 <%= form_for @user do |f| %>
-  Name: <%= f.text_field :name %> <br>
-  Breed: <%= f.text_field :species %> <br>
-  Age:  <%= f.text_field :age %> <br>
-  Bio:  <%= f.text_area :bio %> <br>
-  Tagline: <%= f.text_field :body %> <br>
-  Email: <%= f.text_field :email %> <br>
-  Password: <%= f.password_field :password %> <br>
+  Name: <%= f.text_field :name, placeholder: 'name' %> <br>
+  Breed: <%= f.text_field :species, placeholder: 'breed' %> <br>
+  Age:  <%= f.text_field :age, placeholder: 'age' %> <br>
+  Bio:  <%= f.text_area :bio, placeholder: 'bio' %> <br>
+  Tagline: <%= f.text_field :body, placeholder: 'tagline' %> <br>
   <%= f.submit 'Update Profile' %>
 <% end %>
