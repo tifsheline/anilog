@@ -29,6 +29,8 @@ By creating models, controllers, and actions in RoR, users of this site are able
 * Uploading videos
 * Detailed graphic design
 * Link to other social media platforms
+* Search feature to locate specific Anilogs
+* Ability to add multiple photos to user profile
 
 ###User Stories
 
