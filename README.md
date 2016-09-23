@@ -22,7 +22,7 @@ Technologies Used: RoR / Bootstrap / HTML / CSS
 
 By creating models, controllers, and actions in RoR, users of this site are able to create new profiles, log in and out, view other profiles, and add comments to other users' status.  BCrypt gives users a secure way to create and access their profiles.  Bootstrap and paperclips gems were used for styling and to give users the capability of uploading photos.  
 
-![AniLog_App](readme_assets/images/AniLog_Screenshot_3.png)
+![AniLog_App](readme_assets/images/Anilog_Screenshot_3.png)
 
 ## Not-Yet-Implemented
 
