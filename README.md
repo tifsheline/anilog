@@ -54,9 +54,7 @@ By creating models, controllers, and actions in RoR, users of this site are able
 
 5. As a user, I want to change my login information when necessary.
 
-6.  As a user, I want to delete old statuses.
-
-7. As a user, I want to add multiple photos to my profile and attach photos to my status updates.
+6. As a user, I want to add multiple photos to my profile and attach photos to my status updates.
 
 ##Credits
 
