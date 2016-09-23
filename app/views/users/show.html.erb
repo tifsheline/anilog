@@ -31,9 +31,9 @@
 
 <!--  displays image -->
 <div class="text-center">
-  <%= image_tag @user.photo.url(:medium), {class: "img-rounded"} %> <br>
-  <strong>Age:</strong><%= @user.age %> <br>
-  <strong>Breed:</strong><%= @user.species %> <br>
+  <%= image_tag @user.photo.url(:medium), {class: "img-circle"} %> <br>
+  Age: <%= @user.age %> <br>
+  Breed: <%= @user.species %> <br>
 </div>
 
 <blockquote class="blockquote-reverse">

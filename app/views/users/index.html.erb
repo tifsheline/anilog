@@ -4,7 +4,7 @@
 <style media="screen">
 
   body{
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Gloria Hallelujah', cursive;
 }
   h1{
@@ -22,7 +22,7 @@
 <!--  index of user profiles-->
 <% @users.each do |u| %>
   <hr>
-  <%= link_to image_tag(u.photo.url(:medium)), user_path(u) %> <br>
+  <%= link_to image_tag(u.photo.url(:medium), {class: 'img-circle'}), user_path(u) %> <br>
   Name:   <%= u.name %> <br>
   Breed:  <%= u.species %> <br>
   Age:    <%= u.age %> <br>
