@@ -1,4 +1,24 @@
-<h1 class="text-center">Create A Profile</h1>
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <style media="screen">
+
+    body{
+      font-size: 30px;
+      font-family: 'Gloria Hallelujah', cursive;
+}
+    h1{
+      font-size: 50px;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <h1 class="text-center">Create A Profile</h1>
+
+<!-- Form to create a new profile -->
 
 <%= form_for @user, html: { multipart: true } do |f| %>
   <%= f.label :name %> <br>
@@ -15,3 +35,5 @@
   <%= f.text_field :password, class:"form-control", placeholder: 'password' %> <br>
   <input class="btn btn-default" type="submit" value="Submit">
 <% end %>
+
+</body>

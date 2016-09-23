@@ -1,17 +1,26 @@
-<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<head>
 
-<style media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <style media="screen">
 
-body{
-  
-  font-family: 'Shadows Into Light', cursive;
+    body{
+      font-size: 30px;
+      font-family: 'Gloria Hallelujah', cursive;
 }
-</style>
+    h1{
+      font-size: 50px;
+}
+  </style>
+
+</head>
+
+<body>
 
 <h1>Edit Your Profile</h1>
 
 <%= link_to 'Go Back', user_path(@user) %>
 
+<!--  form for editing user profiles-->
 <%= form_for @user do |f| %>
   <strong>Name:</strong> <%= f.text_field :name, placeholder: 'name', class: 'form-control' %> <br>
   <strong>Breed:</strong> <%= f.text_field :species, placeholder: 'breed', class: 'form-control' %> <br>
@@ -19,3 +28,5 @@ body{
   <strong>Bio:</strong>  <%= f.text_area :bio, placeholder: 'bio', class: 'form-control' %> <br>
   <%= f.submit 'Update Profile' %>
 <% end %>
+
+</body>

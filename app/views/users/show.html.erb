@@ -1,23 +1,35 @@
-<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
 <style media="screen">
 
-body{
-
-  font-family: 'Shadows Into Light', cursive;
+  body{
+    font-size: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+  h1{
+    font-size: 50px;
+}
+.pic_upl{
+  font-size: 15px;
 }
 </style>
+
+<body>
 
 <h1 class="text-center">Meet...</h1>
 
 <hr>
 
-<%= form_for @user, html: {multipart: true} do |f| %>
-<%= f.label 'Upload a Profile Pic!' %> <br>
-<%= f.file_field :photo %>
-<%= f.submit 'Upload Photo'%>
-<% end %>
+<!--  form for uploading photos-->
+<div class="pic_upl">
+  <%= form_for @user, html: {multipart: true} do |f| %>
+  <%= f.label 'Upload a Profile Pic!' %> <br>
+  <%= f.file_field :photo %> <br>
+  <%= f.submit 'Upload Photo'%>
+  <% end %>
+</div>
 
+<!--  displays image -->
 <div class="text-center">
   <%= image_tag @user.photo.url(:medium), {class: "img-rounded"} %> <br>
   <strong>Age:</strong><%= @user.age %> <br>
@@ -30,11 +42,13 @@ body{
 
 <hr>
 
+<!--  form for updating user status-->
 <%= form_for @status do |f| %>
   <%= f.text_area :body, placeholder: 'What are you up to?', class: 'form-control' %><br>
-  <%= f.submit %>
+  <%= f.submit 'Update Status' %>
 <% end %>
 
+<!--  displays the status and allows user to show status to see comments and delete status-->
 <% @user.statuses.each do |s| %>
   <hr>
   <%= s.body %> <br>
@@ -43,3 +57,5 @@ body{
 <% end %>
 
 <hr>
+
+</body>

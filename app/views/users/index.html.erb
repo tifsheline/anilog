@@ -1,23 +1,34 @@
-<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Shadows+Into+Light" rel="stylesheet">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
 <style media="screen">
-body{
-  font-family: 'Architects Daughter', cursive;
+
+  body{
+    font-size: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+  h1{
+    font-size: 55px;
 }
 </style>
+</head>
 
-<h1>Anilog Profiles</h1>
+<body>
+
+<h1 class="text-center">All Anilogs</h1>
 
 <%= link_to 'My Profile', user_path(@user) %>
 
-<hr>
-
+<!--  index of user profiles-->
 <% @users.each do |u| %>
-    <%= link_to image_tag(u.photo.url(:medium)), user_path(u) %> <br>
-    <strong>Name:</strong>   <%= u.name %> <br>
-    <strong>Breed:</strong>  <%= u.species %> <br>
-    <strong>Age:</strong>    <%= u.age %> <br>
+  <hr>
+  <%= link_to image_tag(u.photo.url(:medium)), user_path(u) %> <br>
+  Name:   <%= u.name %> <br>
+  Breed:  <%= u.species %> <br>
+  Age:    <%= u.age %> <br>
     <% if(u.statuses.last) %>
-      <strong>Status:</strong> <%= u.statuses.last.body %> <br>
+      Status: <%= u.statuses.last.body %> <br>
     <% end %>
 <% end %>
+
+</body>

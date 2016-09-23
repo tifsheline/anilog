@@ -1,17 +1,38 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+<style media="screen">
+  body{
+    font-size: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+  h1{
+    font-size: 65px;
+}
+</style>
+
+</head>
+
+<body>
+
 <br>
 
 <%= link_to 'Go Back', user_path(@status.user)  %>
 
 <hr>
 
-<strong>My Status:</strong> <%= @status.body %>
+<strong>My Status:</strong> <%= @status.body %> <br>
 
+<!--  Form for creating a comment-->
 <%= form_for [@status, @status.comments.build] do |f| %>
-  <%= f.text_area :body, placeholder: 'enter comment here' %>
+  <%= f.text_area :body, placeholder: 'enter comment here', class: 'form-control' %> <br>
   <%= f.submit %>
 <% end %>
 
+<!--  allows comments to be rendered for each staus-->
 <% @status.comments.each do |comment| %>
   <%= comment.body %> <br>
   <%= comment.created_at %> <br>
 <% end %>
+
+</body>
