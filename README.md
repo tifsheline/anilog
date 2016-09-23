@@ -1,4 +1,4 @@
-#**AniLog!**
+#**Anilog!**
 
 ##A Ruby on Rails Based Social App for Your Pet
 
@@ -14,7 +14,7 @@ There are channels on YouTube dedicated to animals.  There are IG accounts creat
 
 ##How do I Join?
 
-Check out the following link to join AniLog.  This site provides a secure way to create a profile and login information with an email and password.  Upload a profile pic and you're ready to start socializing with other pet owners.  You can update your pet's status,  visit other AniLogs and comment on their status.
+Check out the following link to join Anilog (https://shielded-stream-97248.herokuapp.com/).  This site provides a secure way to create a profile and login information with an email and password.  Upload a profile pic and you're ready to start socializing with other pet owners.  You can update your pet's status,  visit other Anilogs and comment on their status.
 
 ## Development Process
 
@@ -36,19 +36,19 @@ By creating models, controllers, and actions in RoR, users of this site are able
 
 2. As a user, I can upload photos and update my pet's status daily.
 
-3. As a user, I can view other AniLogs.
+3. As a user, I can view other Anilogs.
 
 4. As a user, I can comment on the status of other Anilogs.
 
 ##Future Implementations
 
-1. As a user, I want to follow other AniLogs.
+1. As a user, I want to follow other Anilogs.
 
 2. As a user, I want to like other Anilogs and/or their status.
 
 3. As a user, I want to upload videos.
 
-4. As a user, I want to share my AniLog on other platforms such as Facebook, IG, etc.
+4. As a user, I want to share my Anilog on other platforms such as Facebook, IG, etc.
 
 5. As a user, I want to change my login information when necessary.
 
