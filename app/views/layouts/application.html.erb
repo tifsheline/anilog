@@ -9,12 +9,10 @@
 </head>
 <body>
 
+<%= render '/layouts/nav' %>
+
 <div class="container">
-  <% if logged_in? %>
-    <%= link_to 'Logout', logout_path, method: :delete%>
-  <% else %>
-    <%= link_to 'Login', new_session_path %>
-  <% end %>
+
 
 <%= yield %>
 </div>

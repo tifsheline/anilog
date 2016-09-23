@@ -1,6 +1,10 @@
+<br>
+
+<%= link_to 'Go Back', user_path(@status.user)  %>
+
 <hr>
 
-My Status: <%= @status.body %>
+<strong>My Status:</strong> <%= @status.body %>
 
 <%= form_for [@status, @status.comments.build] do |f| %>
   <%= f.text_area :body, placeholder: 'enter comment here' %>

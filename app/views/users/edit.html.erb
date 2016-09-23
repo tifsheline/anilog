@@ -1,12 +1,19 @@
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Shadows+Into+Light" rel="stylesheet">
+
+<style media="screen">
+body{
+  font-family: 'Architects Daughter', cursive;
+}
+</style>
+
 <h1>Edit Your Profile</h1>
 
 <%= link_to 'Go Back', user_path(@user) %>
 
 <%= form_for @user do |f| %>
-  Name: <%= f.text_field :name, placeholder: 'name' %> <br>
-  Breed: <%= f.text_field :species, placeholder: 'breed' %> <br>
-  Age:  <%= f.text_field :age, placeholder: 'age' %> <br>
-  Bio:  <%= f.text_area :bio, placeholder: 'bio' %> <br>
-  Tagline: <%= f.text_field :body, placeholder: 'tagline' %> <br>
+  <strong>Name:</strong> <%= f.text_field :name, placeholder: 'name', class: 'form-control' %> <br>
+  <strong>Breed:</strong> <%= f.text_field :species, placeholder: 'breed', class: 'form-control' %> <br>
+  <strong>Age:</strong>  <%= f.text_field :age, placeholder: 'age', class: 'form-control' %> <br>
+  <strong>Bio:</strong>  <%= f.text_area :bio, placeholder: 'bio', class: 'form-control' %> <br>
   <%= f.submit 'Update Profile' %>
 <% end %>

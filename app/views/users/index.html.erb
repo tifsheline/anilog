@@ -1,14 +1,23 @@
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Shadows+Into+Light" rel="stylesheet">
+
+<style media="screen">
+body{
+  font-family: 'Architects Daughter', cursive;
+}
+</style>
+
 <h1>Anilog Profiles</h1>
 
 <%= link_to 'My Profile', user_path(@user) %>
 
+<hr>
+
 <% @users.each do |u| %>
-  <hr>
-  <%= link_to image_tag(u.photo.url(:medium)), user_path(u) %> <br>
-  Name:   <%= u.name %> <br>
-  Breed:  <%= u.species %> <br>
-  Age:    <%= u.age %> <br>
-  <% if(u.statuses.last) %>
-  Status: <%= u.statuses.last.body %> <br>
-  <% end%>
+    <%= link_to image_tag(u.photo.url(:medium)), user_path(u) %> <br>
+    <strong>Name:</strong>   <%= u.name %> <br>
+    <strong>Breed:</strong>  <%= u.species %> <br>
+    <strong>Age:</strong>    <%= u.age %> <br>
+    <% if(u.statuses.last) %>
+      <strong>Status:</strong> <%= u.statuses.last.body %> <br>
+    <% end %>
 <% end %>

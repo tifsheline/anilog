@@ -30,6 +30,15 @@ class StatusesController < ApplicationController
   end
 
   def destroy
+    @status = Status.find(params[:id])
+
+      if @status.user != current_user
+        redirect_to users_path @users_path
+      else
+        @status.comments.destroy_all
+          @status.destroy
+          redirect_to user_path current_user
+        end
   end
 
   private

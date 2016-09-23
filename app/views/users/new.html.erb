@@ -7,16 +7,11 @@
   <%= f.text_field :species, class:"form-control", placeholder: 'pet breed' %> <br>
   <%= f.label :age %> <br>
   <%= f.text_field :age, class:"form-control", placeholder: 'pet age' %> <br>
-  <%= f.label :body, 'Tagline' %> <br>
-  <%= f.text_field :body, class:"form-control" , placeholder: 'caption'%> <br>
   <%= f.label :bio %> <br>
   <%= f.text_field :bio, class:"form-control", placeholder: 'pet description' %> <br>
   <%= f.label :email %> <br>
   <%= f.text_field :email, class:"form-control", placeholder: 'pet owner email address' %> <br>
   <%= f.label :password %> <br>
   <%= f.text_field :password, class:"form-control", placeholder: 'password' %> <br>
-  <%= f.label :photo %> <br>
-  <%= f.file_field :photo, class:"form-control", placeholder: 'upload photo' %> <br>
-  <%= image_tag @user.photo.url %>
   <input class="btn btn-default" type="submit" value="Submit">
 <% end %>

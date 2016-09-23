@@ -1,9 +1,14 @@
 <h1 class="text-center">Welcome to Anilog<small> A Social App for Pets</small></h1>
 
-<style>
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Shadows+Into+Light" rel="stylesheet">
+
+<style media="screen">
+
 body{
   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/5f/4e/b6/5f4eb60bd43f31f29e6cbfee54d1d365.jpg');
   background-size: cover;
+
+  font-family: 'Architects Daughter', cursive;
 }
 </style>
 
@@ -24,7 +29,7 @@ body{
            </div>
            <div class="form-group">
                <div class="col-md-8 col-md-offset-4">
-                   <%= submit_tag 'Log in', class: 'btn btn-success' %>
+                   <%= submit_tag 'Login', class: 'btn btn-success' %>
                    <%= link_to "Don't have an account?", new_user_path, class: 'btn btn-primary' %>
                </div>
            </div>
